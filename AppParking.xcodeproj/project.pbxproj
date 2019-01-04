@@ -10,12 +10,24 @@
 		08CB400C63022F3FCEB8F24C /* Pods_AppParkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300EEF24D9CA43A4D04F5DB3 /* Pods_AppParkingTests.framework */; };
 		3F123096727C718DD7C578F5 /* Pods_AppParking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADCF10F0601AE5843522BF6 /* Pods_AppParking.framework */; };
 		68BE82F421DE8D6300544D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE82F321DE8D6300544D3A /* AppDelegate.swift */; };
-		68BE82F621DE8D6300544D3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE82F521DE8D6300544D3A /* ViewController.swift */; };
-		68BE82F921DE8D6300544D3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BE82F721DE8D6300544D3A /* Main.storyboard */; };
 		68BE82FB21DE8D6400544D3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BE82FA21DE8D6400544D3A /* Assets.xcassets */; };
 		68BE82FE21DE8D6400544D3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BE82FC21DE8D6400544D3A /* LaunchScreen.storyboard */; };
 		68BE830921DE8D6400544D3A /* AppParkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE830821DE8D6400544D3A /* AppParkingTests.swift */; };
 		68BE831421DE8D6400544D3A /* AppParkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE831321DE8D6400544D3A /* AppParkingUITests.swift */; };
+		68FB46D621DE90AA00B80EF0 /* ListVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46D521DE90AA00B80EF0 /* ListVehiclesViewController.swift */; };
+		68FB46D821DE912700B80EF0 /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46D721DE912700B80EF0 /* AddVehicleViewController.swift */; };
+		68FB46DD21DE95AD00B80EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FB46DB21DE95AD00B80EF0 /* Main.storyboard */; };
+		68FB46DF21DE967B00B80EF0 /* DeleteVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46DE21DE967B00B80EF0 /* DeleteVehicleViewController.swift */; };
+		68FB46E721DE9F8B00B80EF0 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46E621DE9F8B00B80EF0 /* VehicleCell.swift */; };
+		68FB46E921DEA04E00B80EF0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46E821DEA04E00B80EF0 /* BaseViewController.swift */; };
+		68FB46EB21DEA10700B80EF0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46EA21DEA10700B80EF0 /* Constants.swift */; };
+		68FB46ED21DEA39A00B80EF0 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46EC21DEA39A00B80EF0 /* Vehicle.swift */; };
+		68FB46EF21DEA3CD00B80EF0 /* TypeVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46EE21DEA3CD00B80EF0 /* TypeVehicle.swift */; };
+		68FB46F121DEA9EE00B80EF0 /* ListVehiclesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F021DEA9EE00B80EF0 /* ListVehiclesPresenter.swift */; };
+		68FB46F321DEAA0800B80EF0 /* VehicleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F221DEAA0800B80EF0 /* VehicleRepository.swift */; };
+		68FB46F521DEAA1900B80EF0 /* TypeVehicleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F421DEAA1900B80EF0 /* TypeVehicleRepository.swift */; };
+		68FB46F721DEAA5400B80EF0 /* IListVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F621DEAA5400B80EF0 /* IListVehicles.swift */; };
+		68FB46F921DEAB4B00B80EF0 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F821DEAB4B00B80EF0 /* ResponseObject.swift */; };
 		80001343691FB1E0D72C56EF /* Pods_AppParkingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C764D77F57E4FFDAB5AA8C1E /* Pods_AppParkingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +56,6 @@
 		6440A768386F0F3FC72A4F87 /* Pods-AppParkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppParkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppParkingTests/Pods-AppParkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		68BE82F021DE8D6300544D3A /* AppParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BE82F321DE8D6300544D3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68BE82F521DE8D6300544D3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68BE82F821DE8D6300544D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68BE82FA21DE8D6400544D3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68BE82FD21DE8D6400544D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68BE82FF21DE8D6400544D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +65,20 @@
 		68BE830F21DE8D6400544D3A /* AppParkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppParkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BE831321DE8D6400544D3A /* AppParkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppParkingUITests.swift; sourceTree = "<group>"; };
 		68BE831521DE8D6400544D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68FB46D521DE90AA00B80EF0 /* ListVehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVehiclesViewController.swift; sourceTree = "<group>"; };
+		68FB46D721DE912700B80EF0 /* AddVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
+		68FB46DC21DE95AD00B80EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68FB46DE21DE967B00B80EF0 /* DeleteVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVehicleViewController.swift; sourceTree = "<group>"; };
+		68FB46E621DE9F8B00B80EF0 /* VehicleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
+		68FB46E821DEA04E00B80EF0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		68FB46EA21DEA10700B80EF0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		68FB46EC21DEA39A00B80EF0 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		68FB46EE21DEA3CD00B80EF0 /* TypeVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVehicle.swift; sourceTree = "<group>"; };
+		68FB46F021DEA9EE00B80EF0 /* ListVehiclesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVehiclesPresenter.swift; sourceTree = "<group>"; };
+		68FB46F221DEAA0800B80EF0 /* VehicleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRepository.swift; sourceTree = "<group>"; };
+		68FB46F421DEAA1900B80EF0 /* TypeVehicleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVehicleRepository.swift; sourceTree = "<group>"; };
+		68FB46F621DEAA5400B80EF0 /* IListVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListVehicles.swift; sourceTree = "<group>"; };
+		68FB46F821DEAB4B00B80EF0 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		78006A7FFFC15D6986C525AE /* Pods-AppParkingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppParkingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppParkingUITests/Pods-AppParkingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C764D77F57E4FFDAB5AA8C1E /* Pods_AppParkingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppParkingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50A3D40A1FC389AD5213C47 /* Pods-AppParking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppParking.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppParking/Pods-AppParking.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,11 +139,16 @@
 			isa = PBXGroup;
 			children = (
 				68BE82F321DE8D6300544D3A /* AppDelegate.swift */,
-				68BE82F521DE8D6300544D3A /* ViewController.swift */,
-				68BE82F721DE8D6300544D3A /* Main.storyboard */,
-				68BE82FA21DE8D6400544D3A /* Assets.xcassets */,
-				68BE82FC21DE8D6400544D3A /* LaunchScreen.storyboard */,
 				68BE82FF21DE8D6400544D3A /* Info.plist */,
+				68FB46CA21DE8F5000B80EF0 /* Base */,
+				68FB46CB21DE8F5C00B80EF0 /* Utilities */,
+				68FB46D221DE8FE900B80EF0 /* Models */,
+				68FB46CC21DE8F6300B80EF0 /* ViewControllers */,
+				68FB46CD21DE8F6A00B80EF0 /* Presenters */,
+				68FB46CF21DE8F7400B80EF0 /* Repositories */,
+				68FB46CE21DE8F6F00B80EF0 /* Protocols */,
+				68FB46D121DE8F9300B80EF0 /* Views */,
+				68FB46D021DE8F8000B80EF0 /* Resources */,
 			);
 			path = AppParking;
 			sourceTree = "<group>";
@@ -140,6 +169,93 @@
 				68BE831521DE8D6400544D3A /* Info.plist */,
 			);
 			path = AppParkingUITests;
+			sourceTree = "<group>";
+		};
+		68FB46CA21DE8F5000B80EF0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46E821DEA04E00B80EF0 /* BaseViewController.swift */,
+				68FB46EA21DEA10700B80EF0 /* Constants.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		68FB46CB21DE8F5C00B80EF0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		68FB46CC21DE8F6300B80EF0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46E521DE9DFD00B80EF0 /* Controls */,
+				68FB46D521DE90AA00B80EF0 /* ListVehiclesViewController.swift */,
+				68FB46D721DE912700B80EF0 /* AddVehicleViewController.swift */,
+				68FB46DE21DE967B00B80EF0 /* DeleteVehicleViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		68FB46CD21DE8F6A00B80EF0 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46F021DEA9EE00B80EF0 /* ListVehiclesPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		68FB46CE21DE8F6F00B80EF0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46F621DEAA5400B80EF0 /* IListVehicles.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		68FB46CF21DE8F7400B80EF0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46F221DEAA0800B80EF0 /* VehicleRepository.swift */,
+				68FB46F421DEAA1900B80EF0 /* TypeVehicleRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		68FB46D021DE8F8000B80EF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68BE82FA21DE8D6400544D3A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68FB46D121DE8F9300B80EF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46DB21DE95AD00B80EF0 /* Main.storyboard */,
+				68BE82FC21DE8D6400544D3A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68FB46D221DE8FE900B80EF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46EC21DEA39A00B80EF0 /* Vehicle.swift */,
+				68FB46EE21DEA3CD00B80EF0 /* TypeVehicle.swift */,
+				68FB46F821DEAB4B00B80EF0 /* ResponseObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		68FB46E521DE9DFD00B80EF0 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				68FB46E621DE9F8B00B80EF0 /* VehicleCell.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		6DE69746E911B33CFAD5E96C /* Frameworks */ = {
@@ -176,6 +292,7 @@
 				68BE82EC21DE8D6300544D3A /* Sources */,
 				68BE82ED21DE8D6300544D3A /* Frameworks */,
 				68BE82EE21DE8D6300544D3A /* Resources */,
+				0EF067C8174FC7426B369C03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,9 +389,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FB46DD21DE95AD00B80EF0 /* Main.storyboard in Resources */,
 				68BE82FE21DE8D6400544D3A /* LaunchScreen.storyboard in Resources */,
 				68BE82FB21DE8D6400544D3A /* Assets.xcassets in Resources */,
-				68BE82F921DE8D6300544D3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +412,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0EF067C8174FC7426B369C03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppParking/Pods-AppParking-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppParking/Pods-AppParking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2EE66CA354541FF2425ED6A8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,8 +511,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68BE82F621DE8D6300544D3A /* ViewController.swift in Sources */,
+				68FB46ED21DEA39A00B80EF0 /* Vehicle.swift in Sources */,
+				68FB46E721DE9F8B00B80EF0 /* VehicleCell.swift in Sources */,
+				68FB46F721DEAA5400B80EF0 /* IListVehicles.swift in Sources */,
+				68FB46F321DEAA0800B80EF0 /* VehicleRepository.swift in Sources */,
+				68FB46D821DE912700B80EF0 /* AddVehicleViewController.swift in Sources */,
+				68FB46F521DEAA1900B80EF0 /* TypeVehicleRepository.swift in Sources */,
+				68FB46F921DEAB4B00B80EF0 /* ResponseObject.swift in Sources */,
+				68FB46EF21DEA3CD00B80EF0 /* TypeVehicle.swift in Sources */,
+				68FB46D621DE90AA00B80EF0 /* ListVehiclesViewController.swift in Sources */,
+				68FB46DF21DE967B00B80EF0 /* DeleteVehicleViewController.swift in Sources */,
+				68FB46EB21DEA10700B80EF0 /* Constants.swift in Sources */,
 				68BE82F421DE8D6300544D3A /* AppDelegate.swift in Sources */,
+				68FB46E921DEA04E00B80EF0 /* BaseViewController.swift in Sources */,
+				68FB46F121DEA9EE00B80EF0 /* ListVehiclesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,20 +560,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		68BE82F721DE8D6300544D3A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68BE82F821DE8D6300544D3A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		68BE82FC21DE8D6400544D3A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				68BE82FD21DE8D6400544D3A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		68FB46DB21DE95AD00B80EF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68FB46DC21DE95AD00B80EF0 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
