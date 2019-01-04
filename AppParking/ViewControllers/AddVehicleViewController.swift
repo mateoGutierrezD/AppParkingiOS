@@ -8,12 +8,44 @@
 
 import UIKit
 
-class AddVehicleViewController: UIViewController {
+class AddVehicleViewController: UIViewController, IAddVehicle {
 
+    // MARK: IBOutlets
+    
+    // MARK: Variables
+    fileprivate var addVehiclePresenter : AddVehiclePresenter!
+    var vehicle: Vehicle?
+    var vehicleTypes: [TypeVehicle]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpView()
+        initializeDelegates()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        initializeDelegates()
+    }
+    
+    func setUpView() {
+        
+    }
+    
+    func initializeDelegates() {
+        addVehiclePresenter = AddVehiclePresenter(self)
+        addVehiclePresenter.callServiceTGetTypeVehicles()
+    }
+    
+    func errorService(_ error: String) {
+        print(error)
+    }
+    
+    func presentMessage(_ message: String) {
+        print(message)
+    }
+    
+    func showVehicleTypes(_ listVehicleTypes: [TypeVehicle]) {
+        self.vehicleTypes = listVehicleTypes
     }
     
 

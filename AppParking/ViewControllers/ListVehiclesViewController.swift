@@ -42,11 +42,20 @@ class ListVehiclesViewController: BaseViewController, UITableViewDelegate, UITab
     }
     
     func errorService(_ error: String) {
+        let alert = UIAlertController(title: Constants.ALERT_ERROR_TITLE, message: Constants.ERROR_COMUNICATION_BACKEND, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         print(error)
-        print(Constants.ERROR_COMUNICATION_BACKEND)
     }
     
     func presentMessage(_ message: String) {
+        if( message == Constants.PARKING_EMPTY) {
+            self.vehiclesList = []
+            self.tableView.reloadData()
+        }
+        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         print(message)
     }
     

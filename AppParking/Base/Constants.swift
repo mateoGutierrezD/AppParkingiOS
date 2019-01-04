@@ -23,12 +23,26 @@ struct Constants {
     static let REGISTER_VEHICLE_PATH = "register"
     static let DELETE_VEHICLE_PATH = "delete?plate="
     
-    // TITLES
+    // LABELS
     static let LIST_VEHICLES_VIEW_TITLE = "Vehiculos en el parqueadero"
+    static let DELETE_VEHICLE_VIEW_TITLE = "Elimina un vehículo"
     static let LABEL_HOUR_IN_TITLE = "Hora de ingreso"
+    static let DELETE_VEHICLE_VIEW_DESCRIPTION = "Para cobrar la salida un vehículo, debes ingresar la placa:"
+    static let EXAMPLE_PLATE = "ITZ 678"
     
-    // ERRORS
+    // ALERTS
+    static let ALERT_ERROR_TITLE = "Error!"
+    static let ALERT_WARNING_TITLE = "Alerta!"
+    static let ALERT_SUCCESSFUL_ACTION_TITLE = "Enhorabuena!"
+    static let ALERT_BUTTON_ACCEPT = "Aceptar"
     static let ERROR_COMUNICATION_BACKEND = "Ocurrió un error de comunicación"
+    static let EMPTY_FIELD_ALERT = "Ups!, debes llenar todos los campos."
+    static let PARKING_EMPTY = "No hay vehículos en el parqueadero"
+
+    
+    
+    // BUTTONS
+    static let BUTTON_DELETE_VIEW_TITLE = "Eliminar vehículo"
 
 
 }

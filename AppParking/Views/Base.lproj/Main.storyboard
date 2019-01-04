@@ -39,13 +39,113 @@
                     <view key="view" contentMode="scaleToFill" id="n0x-cV-8Lw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Up-18-BSe">
+                                <rect key="frame" x="16" y="20" width="343" height="598"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ow-hV-oIU">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="89.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elimina un vehículo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxU-fs-4lc" userLabel="Elimina un vehículo">
+                                                <rect key="frame" x="34.5" y="13.5" width="274" height="62.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="JxU-fs-4lc" firstAttribute="height" secondItem="0ow-hV-oIU" secondAttribute="height" multiplier="0.7" id="7Vb-dJ-WuG"/>
+                                            <constraint firstItem="JxU-fs-4lc" firstAttribute="centerY" secondItem="0ow-hV-oIU" secondAttribute="centerY" id="EYy-uN-CPC"/>
+                                            <constraint firstItem="JxU-fs-4lc" firstAttribute="centerX" secondItem="0ow-hV-oIU" secondAttribute="centerX" id="uyB-Wn-7cG"/>
+                                            <constraint firstItem="JxU-fs-4lc" firstAttribute="width" secondItem="0ow-hV-oIU" secondAttribute="width" multiplier="0.8" id="yhK-L1-pd9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHm-0P-hqV">
+                                        <rect key="frame" x="0.0" y="89.5" width="343" height="179.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para cobrar la salida un vehículo, debes ingresar la placa:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnt-w3-VCo">
+                                                <rect key="frame" x="20" y="0.0" width="315" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Cnt-w3-VCo" secondAttribute="height" multiplier="315:41" id="ZQU-Z9-y36"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pG6-AM-RJ2">
+                                                <rect key="frame" x="50" y="91" width="243" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Cnt-w3-VCo" firstAttribute="leading" secondItem="PHm-0P-hqV" secondAttribute="leading" constant="20" id="17s-0V-ALS"/>
+                                            <constraint firstAttribute="trailing" secondItem="pG6-AM-RJ2" secondAttribute="trailing" constant="50" id="Meb-kF-Msf"/>
+                                            <constraint firstItem="Cnt-w3-VCo" firstAttribute="top" secondItem="PHm-0P-hqV" secondAttribute="top" id="Qea-ux-WdN"/>
+                                            <constraint firstItem="pG6-AM-RJ2" firstAttribute="leading" secondItem="PHm-0P-hqV" secondAttribute="leading" constant="50" id="WA6-gj-NC9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cnt-w3-VCo" secondAttribute="trailing" constant="8" id="ZAT-gd-rYS"/>
+                                            <constraint firstItem="pG6-AM-RJ2" firstAttribute="top" secondItem="Cnt-w3-VCo" secondAttribute="bottom" constant="50" id="y3P-e5-KSg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddB-Uh-OOR">
+                                        <rect key="frame" x="0.0" y="269" width="343" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaD-a7-L1z">
+                                                <rect key="frame" x="86" y="15" width="171.5" height="30"/>
+                                                <state key="normal" title="Eliminar vehículo"/>
+                                                <connections>
+                                                    <action selector="deleteVehicle:" destination="PkV-gY-kvd" eventType="touchUpInside" id="Bwq-bM-Uin"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="uaD-a7-L1z" firstAttribute="centerX" secondItem="ddB-Uh-OOR" secondAttribute="centerX" id="KXc-MK-6hL"/>
+                                            <constraint firstItem="uaD-a7-L1z" firstAttribute="height" secondItem="ddB-Uh-OOR" secondAttribute="height" multiplier="0.5" id="g6b-IM-sUe"/>
+                                            <constraint firstItem="uaD-a7-L1z" firstAttribute="centerY" secondItem="ddB-Uh-OOR" secondAttribute="centerY" id="k9s-py-igy"/>
+                                            <constraint firstItem="uaD-a7-L1z" firstAttribute="width" secondItem="ddB-Uh-OOR" secondAttribute="width" multiplier="0.5" id="nyc-Mj-OJ8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ddB-Uh-OOR" firstAttribute="height" secondItem="6Up-18-BSe" secondAttribute="height" multiplier="0.1" id="NMw-PG-YaO"/>
+                                    <constraint firstItem="ddB-Uh-OOR" firstAttribute="top" secondItem="PHm-0P-hqV" secondAttribute="bottom" id="OBP-ar-a93"/>
+                                    <constraint firstItem="0ow-hV-oIU" firstAttribute="bottom" secondItem="PHm-0P-hqV" secondAttribute="top" id="Tlr-4o-Muj"/>
+                                    <constraint firstItem="0ow-hV-oIU" firstAttribute="centerX" secondItem="6Up-18-BSe" secondAttribute="centerX" id="UDk-xF-UtR"/>
+                                    <constraint firstItem="ddB-Uh-OOR" firstAttribute="centerX" secondItem="6Up-18-BSe" secondAttribute="centerX" id="UNg-GA-5Ql"/>
+                                    <constraint firstItem="0ow-hV-oIU" firstAttribute="height" secondItem="6Up-18-BSe" secondAttribute="height" multiplier="0.15" id="gbJ-zi-453"/>
+                                    <constraint firstItem="0ow-hV-oIU" firstAttribute="top" secondItem="6Up-18-BSe" secondAttribute="top" id="jxm-8S-Iwa"/>
+                                    <constraint firstItem="PHm-0P-hqV" firstAttribute="height" secondItem="6Up-18-BSe" secondAttribute="height" multiplier="0.3" id="mhs-KQ-C0I"/>
+                                    <constraint firstItem="PHm-0P-hqV" firstAttribute="centerX" secondItem="6Up-18-BSe" secondAttribute="centerX" id="tiW-zN-jcg"/>
+                                    <constraint firstItem="0ow-hV-oIU" firstAttribute="width" secondItem="6Up-18-BSe" secondAttribute="width" id="wTk-y5-Ro4"/>
+                                    <constraint firstItem="PHm-0P-hqV" firstAttribute="width" secondItem="6Up-18-BSe" secondAttribute="width" id="x0j-xv-8Mj"/>
+                                    <constraint firstItem="ddB-Uh-OOR" firstAttribute="width" secondItem="6Up-18-BSe" secondAttribute="width" id="yak-8v-Ahu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Up-18-BSe" firstAttribute="top" secondItem="cyT-5I-BQN" secondAttribute="bottom" id="8qg-kd-eiv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Up-18-BSe" secondAttribute="trailing" id="FlN-oz-Ul9"/>
+                            <constraint firstItem="6Up-18-BSe" firstAttribute="leading" secondItem="n0x-cV-8Lw" secondAttribute="leadingMargin" id="hGx-SS-BWu"/>
+                            <constraint firstItem="LgK-Xn-qpG" firstAttribute="top" secondItem="6Up-18-BSe" secondAttribute="bottom" id="hxb-nM-XQT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Eliminar" id="CeW-S8-rbz" userLabel="Eliminar"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="uaD-a7-L1z" id="oaC-B5-ViP"/>
+                        <outlet property="descriptionLabel" destination="Cnt-w3-VCo" id="rqL-AV-FYR"/>
+                        <outlet property="plateTextField" destination="pG6-AM-RJ2" id="JVj-4m-BA9"/>
+                        <outlet property="titleLabel" destination="JxU-fs-4lc" id="kpg-HH-1C3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdB-YM-l6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="-1358"/>
+            <point key="canvasLocation" x="160.80000000000001" y="-1358.7706146926537"/>
         </scene>
         <!--Vehículos-->
         <scene sceneID="wg7-f3-ORb">

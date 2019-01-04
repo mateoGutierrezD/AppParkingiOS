@@ -1,5 +1,5 @@
 //
-//  ResponseVehicles.swift
+//  ResponseObject.swift
 //  AppParking
 //
 //  Created by Mateo Gutiérrez Díaz - Ceiba Software on 1/3/19.
@@ -9,23 +9,21 @@
 import Foundation
 import ObjectMapper
 
-class ResponseVehicles: NSObject, Mappable  {
-
+class ResponseObject: NSObject, Mappable  {
+    
     var message: String?
-    var data: [Vehicle]?
-
+    var data: NSObject?
+    
     override init() {
         super.init()
     }
-
+    
     convenience required init?(map: Map) {
         self.init()
     }
-
+    
     func mapping(map: Map) {
         message <- map["message"]
         data <- map["data"]
     }
 }
-
-

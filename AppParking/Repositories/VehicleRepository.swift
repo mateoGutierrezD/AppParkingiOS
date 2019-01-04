@@ -28,4 +28,38 @@ class VehicleRepository {
             }
         })
     }
+    
+    func callServiceAddVehicle(_ iAddVehicle: IAddVehicle, _ vehicle: Vehicle) {
+        let arrayparametros: [String: Any] = [
+            "typeVehicleCode" : vehicle.typeVehicleCode!,
+            "plate" : vehicle.plate!,
+            "owner" : vehicle.owner!,
+            "cylinder" : vehicle.cylinder!,
+            "typeVehicleDescription" : vehicle.typeVehicleDescription!
+        ]
+        
+        Alamofire.request(Constants.URL_BASE + Constants.VEHICLE_PATH + Constants.REGISTER_VEHICLE_PATH, method: .post, parameters: arrayparametros, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response:
+                DataResponse<ResponseObject>) in
+            
+            switch response.result {
+            case .success:
+                iAddVehicle.presentMessage((response.result.value?.message)!)
+            case .failure(let error):
+                iAddVehicle.errorService(error.localizedDescription)
+            }
+        })
+    }
+    
+    
+    func callServiceDeleteVehicle(_ iDeleteVehicle: IDeleteVehicle, _ plate: String) {
+        Alamofire.request(Constants.URL_BASE + Constants.VEHICLE_PATH + Constants.DELETE_VEHICLE_PATH + plate, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response:
+            DataResponse<ResponseObject>) in
+            switch response.result {
+            case .success:
+                iDeleteVehicle.presentMessage((response.result.value?.message)!)
+            case .failure(let error):
+                iDeleteVehicle.errorService(error.localizedDescription)
+            }
+        })
+    }
 }
