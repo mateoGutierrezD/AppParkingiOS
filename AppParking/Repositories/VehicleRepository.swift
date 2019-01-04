@@ -55,7 +55,11 @@ class VehicleRepository {
             DataResponse<ResponseObject>) in
             switch response.result {
             case .success:
-                iDeleteVehicle.presentMessage(((response.result.value?.message)!), response.result.value?.data as! Int)
+                if  response.result.value?.data != nil {
+                    iDeleteVehicle.presentPayment(((response.result.value?.message)!), response.result.value?.data as! Int)
+                } else {
+                    iDeleteVehicle.presentMessage(((response.result.value?.message)!))
+                }
             case .failure(let error):
                 iDeleteVehicle.errorService(error.localizedDescription)
             }

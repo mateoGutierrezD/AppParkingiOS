@@ -41,32 +41,35 @@ class DeleteVehicleViewController: BaseViewController, UITextFieldDelegate, IDel
         deleteVehiclePresenter = DeleteVehiclePresenter(self)
     }
     
-    func errorService(_ error: String) {
-        let alert = UIAlertController(title: Constants.ALERT_ERROR_TITLE, message: Constants.ERROR_COMUNICATION_BACKEND, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        print(error)
-    }
-    
-    func presentMessage(_ message: String, _ valueToPay: Int) {
-        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: message + Constants.VEHICLE_PRICE_DESCRIPTION + String(valueToPay), preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     @IBAction func deleteVehicle(_ sender: Any) {
         let plate = self.plateTextField.text
         if fieldIsNotEmpty(plate!){
             self.deleteVehiclePresenter.callServiceDeleteVehicle(plate!)
         } else {
-            
+            AlertToEmptyField()
         }
     }
     
-    func presentAlertForEmptyField() {
-        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: Constants.EMPTY_FIELD_ALERT, preferredStyle: UIAlertController.Style.alert)
+    func errorService(_ error: String) {
+        let alert = UIAlertController(title: Constants.ALERT_ERROR_TITLE, message: Constants.ERROR_COMUNICATION_BACKEND, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+        self.plateTextField.text = ""
+        print(error)
+    }
+    
+    func presentMessage(_ message: String) {
+        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        self.plateTextField.text = ""
+    }
+    
+    func presentPayment(_ message: String, _ valueToPay: Int) {
+        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: message + Constants.VEHICLE_PRICE_DESCRIPTION + String(valueToPay), preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        self.plateTextField.text = ""
     }
     
     func fieldIsNotEmpty(_ textfield: String) -> Bool {

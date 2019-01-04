@@ -8,13 +8,19 @@
 
 import UIKit
 
-class AddVehicleViewController: UIViewController, IAddVehicle {
+class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDelegate {
 
     // MARK: IBOutlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var pickerVehicleTypes: UIPickerView!
+    @IBOutlet weak var plateTextField: UITextField!
+    @IBOutlet weak var ownerTextField: UITextField!
+    @IBOutlet weak var cylinderTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
     
     // MARK: Variables
     fileprivate var addVehiclePresenter : AddVehiclePresenter!
-    var vehicle: Vehicle?
+    var vehicle = Vehicle()
     var vehicleTypes: [TypeVehicle]?
     
     override func viewDidLoad() {
@@ -28,7 +34,12 @@ class AddVehicleViewController: UIViewController, IAddVehicle {
     }
     
     func setUpView() {
-        
+        self.plateTextField.delegate = self
+        self.ownerTextField.delegate = self
+        self.cylinderTextField.delegate = self
+        self.plateTextField.placeholder = "Placa (Ejm+ \(Constants.EXAMPLE_PLATE))"
+        self.ownerTextField.placeholder = "Dueño"
+        self.cylinderTextField.placeholder = "Cilidraje de la moto"
     }
     
     func initializeDelegates() {
@@ -37,26 +48,38 @@ class AddVehicleViewController: UIViewController, IAddVehicle {
     }
     
     func errorService(_ error: String) {
+        let alert = UIAlertController(title: Constants.ALERT_ERROR_TITLE, message: Constants.ERROR_COMUNICATION_BACKEND, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        cleanFields()
         print(error)
     }
     
     func presentMessage(_ message: String) {
-        print(message)
+        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        cleanFields()
     }
     
     func showVehicleTypes(_ listVehicleTypes: [TypeVehicle]) {
         self.vehicleTypes = listVehicleTypes
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func registerVehicle(_ sender: Any) {
+        self.vehicle.typeVehicleCode = 1
+        self.vehicle.plate = plateTextField.text!
+        self.vehicle.owner = ownerTextField.text!
+        self.vehicle.cylinder = Int(cylinderTextField.text!)
+        self.vehicle.typeVehicleDescription = "Carro"
+        
+        addVehiclePresenter.callServiceAddVehicle(vehicle)
     }
-    */
+    
+    func cleanFields() {
+        self.plateTextField.text = ""
+        self.ownerTextField.text = ""
+        self.cylinderTextField.text = ""
+    }
 
 }

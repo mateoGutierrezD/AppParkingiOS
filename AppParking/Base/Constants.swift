@@ -39,8 +39,6 @@ struct Constants {
     static let EMPTY_FIELD_ALERT = "Ups!, debes llenar todos los campos."
     static let PARKING_EMPTY = "No hay vehículos en el parqueadero"
     static let VEHICLE_PRICE_DESCRIPTION = "El costo total del parqueadero es de: "
-
-    
     
     // BUTTONS
     static let BUTTON_DELETE_VIEW_TITLE = "Eliminar vehículo"
