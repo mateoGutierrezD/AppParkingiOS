@@ -43,6 +43,7 @@ class ListVehiclesViewController: BaseViewController, UITableViewDelegate, UITab
     
     func errorService(_ error: String) {
         print(error)
+        print(Constants.ERROR_COMUNICATION_BACKEND)
     }
     
     func presentMessage(_ message: String) {

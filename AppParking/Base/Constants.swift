@@ -26,6 +26,11 @@ struct Constants {
     // TITLES
     static let LIST_VEHICLES_VIEW_TITLE = "Vehiculos en el parqueadero"
     static let LABEL_HOUR_IN_TITLE = "Hora de ingreso"
+    
+    // ERRORS
+    static let ERROR_COMUNICATION_BACKEND = "Ocurrió un error de comunicación"
+
+
 }
 
 

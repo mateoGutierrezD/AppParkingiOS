@@ -9,10 +9,10 @@
 import Foundation
 import ObjectMapper
 
-class ResponseObject: NSObject, Mappable  {
+class ResponseVehicles: NSObject, Mappable  {
 
     var message: String?
-    var data: NSObject?
+    var data: [Vehicle]?
 
     override init() {
         super.init()
@@ -28,18 +28,4 @@ class ResponseObject: NSObject, Mappable  {
     }
 }
 
-//class ResponseObject<T: Mappable>: Mappable {
-//
-//    var message: String?
-//    var data: T?
-//
-//    required init?(map: Map){
-//
-//    }
-//
-//    func mapping(map: Map) {
-//        message <- map["message"]
-//        data <- map["data"]
-//    }
-//}
 

@@ -27,7 +27,7 @@
 		68FB46F321DEAA0800B80EF0 /* VehicleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F221DEAA0800B80EF0 /* VehicleRepository.swift */; };
 		68FB46F521DEAA1900B80EF0 /* TypeVehicleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F421DEAA1900B80EF0 /* TypeVehicleRepository.swift */; };
 		68FB46F721DEAA5400B80EF0 /* IListVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F621DEAA5400B80EF0 /* IListVehicles.swift */; };
-		68FB46F921DEAB4B00B80EF0 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F821DEAB4B00B80EF0 /* ResponseObject.swift */; };
+		68FB46F921DEAB4B00B80EF0 /* ResponseVehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB46F821DEAB4B00B80EF0 /* ResponseVehicles.swift */; };
 		80001343691FB1E0D72C56EF /* Pods_AppParkingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C764D77F57E4FFDAB5AA8C1E /* Pods_AppParkingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +78,7 @@
 		68FB46F221DEAA0800B80EF0 /* VehicleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRepository.swift; sourceTree = "<group>"; };
 		68FB46F421DEAA1900B80EF0 /* TypeVehicleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVehicleRepository.swift; sourceTree = "<group>"; };
 		68FB46F621DEAA5400B80EF0 /* IListVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListVehicles.swift; sourceTree = "<group>"; };
-		68FB46F821DEAB4B00B80EF0 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
+		68FB46F821DEAB4B00B80EF0 /* ResponseVehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseVehicles.swift; sourceTree = "<group>"; };
 		78006A7FFFC15D6986C525AE /* Pods-AppParkingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppParkingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppParkingUITests/Pods-AppParkingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C764D77F57E4FFDAB5AA8C1E /* Pods_AppParkingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppParkingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50A3D40A1FC389AD5213C47 /* Pods-AppParking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppParking.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppParking/Pods-AppParking.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			children = (
 				68FB46EC21DEA39A00B80EF0 /* Vehicle.swift */,
 				68FB46EE21DEA3CD00B80EF0 /* TypeVehicle.swift */,
-				68FB46F821DEAB4B00B80EF0 /* ResponseObject.swift */,
+				68FB46F821DEAB4B00B80EF0 /* ResponseVehicles.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 				68FB46F321DEAA0800B80EF0 /* VehicleRepository.swift in Sources */,
 				68FB46D821DE912700B80EF0 /* AddVehicleViewController.swift in Sources */,
 				68FB46F521DEAA1900B80EF0 /* TypeVehicleRepository.swift in Sources */,
-				68FB46F921DEAB4B00B80EF0 /* ResponseObject.swift in Sources */,
+				68FB46F921DEAB4B00B80EF0 /* ResponseVehicles.swift in Sources */,
 				68FB46EF21DEA3CD00B80EF0 /* TypeVehicle.swift in Sources */,
 				68FB46D621DE90AA00B80EF0 /* ListVehiclesViewController.swift in Sources */,
 				68FB46DF21DE967B00B80EF0 /* DeleteVehicleViewController.swift in Sources */,
