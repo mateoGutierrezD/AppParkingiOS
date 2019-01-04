@@ -10,5 +10,5 @@ import Foundation
 
 protocol IDeleteVehicle {
     func errorService(_ error: String)
-    func presentMessage(_ message: String)
+    func presentMessage(_ message: String, _ valueToPay: Int)
 }

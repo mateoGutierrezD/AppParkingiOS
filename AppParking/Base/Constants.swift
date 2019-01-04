@@ -38,6 +38,7 @@ struct Constants {
     static let ERROR_COMUNICATION_BACKEND = "Ocurrió un error de comunicación"
     static let EMPTY_FIELD_ALERT = "Ups!, debes llenar todos los campos."
     static let PARKING_EMPTY = "No hay vehículos en el parqueadero"
+    static let VEHICLE_PRICE_DESCRIPTION = "El costo total del parqueadero es de: "
 
     
     

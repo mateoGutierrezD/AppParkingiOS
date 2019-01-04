@@ -50,13 +50,12 @@ class VehicleRepository {
         })
     }
     
-    
     func callServiceDeleteVehicle(_ iDeleteVehicle: IDeleteVehicle, _ plate: String) {
         Alamofire.request(Constants.URL_BASE + Constants.VEHICLE_PATH + Constants.DELETE_VEHICLE_PATH + plate, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response:
             DataResponse<ResponseObject>) in
             switch response.result {
             case .success:
-                iDeleteVehicle.presentMessage((response.result.value?.message)!)
+                iDeleteVehicle.presentMessage(((response.result.value?.message)!), response.result.value?.data as! Int)
             case .failure(let error):
                 iDeleteVehicle.errorService(error.localizedDescription)
             }

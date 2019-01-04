@@ -48,8 +48,8 @@ class DeleteVehicleViewController: BaseViewController, UITextFieldDelegate, IDel
         print(error)
     }
     
-    func presentMessage(_ message: String) {
-        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: message, preferredStyle: UIAlertController.Style.alert)
+    func presentMessage(_ message: String, _ valueToPay: Int) {
+        let alert = UIAlertController(title: Constants.ALERT_WARNING_TITLE, message: message + Constants.VEHICLE_PRICE_DESCRIPTION + String(valueToPay), preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: Constants.ALERT_BUTTON_ACCEPT, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
