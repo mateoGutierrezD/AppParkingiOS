@@ -3,23 +3,27 @@ PODS:
   - AlamofireObjectMapper (5.2.0):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
+  - DropDown (2.3.4)
   - ObjectMapper (3.4.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireObjectMapper (~> 5.0)
+  - DropDown (= 2.3.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireObjectMapper
+    - DropDown
     - ObjectMapper
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  DropDown: f225ff0fd09dde064d17aa03db7e4d4e4ff40b6b
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
 
-PODFILE CHECKSUM: 4e655f935dff3bd1cbe8c47b8795dc0d53a7d466
+PODFILE CHECKSUM: ec24d24a7061ca138bf2fd4375a6cec51372aa48
 
 COCOAPODS: 1.5.3

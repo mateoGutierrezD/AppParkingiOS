@@ -46,7 +46,7 @@ class DeleteVehicleViewController: BaseViewController, UITextFieldDelegate, IDel
         if fieldIsNotEmpty(plate!){
             self.deleteVehiclePresenter.callServiceDeleteVehicle(plate!)
         } else {
-            AlertToEmptyField()
+            AlertForEmptyField()
         }
     }
     

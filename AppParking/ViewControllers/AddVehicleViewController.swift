@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import DropDown
 
 class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDelegate {
 
     // MARK: IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var pickerVehicleTypes: UIPickerView!
+    @IBOutlet weak var typeView: UIView!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var ownerTextField: UITextField!
     @IBOutlet weak var cylinderTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var cylinderView: UIView!
     
     // MARK: Variables
     fileprivate var addVehiclePresenter : AddVehiclePresenter!
     var vehicle = Vehicle()
     var vehicleTypes: [TypeVehicle]?
+    let dropDown = DropDown()
+    
+    var codeType: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +37,7 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
     
     override func viewWillAppear(_ animated: Bool) {
         initializeDelegates()
+        cleanFields()
     }
     
     func setUpView() {
@@ -40,11 +47,53 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
         self.plateTextField.placeholder = "Placa (Ejm+ \(Constants.EXAMPLE_PLATE))"
         self.ownerTextField.placeholder = "Dueño"
         self.cylinderTextField.placeholder = "Cilidraje de la moto"
+        self.cylinderTextField.text = "0"
+        viewDecoration(1, typeView, "#C3C8D1")
+        initializeGestures()
     }
     
     func initializeDelegates() {
         addVehiclePresenter = AddVehiclePresenter(self)
         addVehiclePresenter.callServiceTGetTypeVehicles()
+    }
+    
+    func initializeGestures() {
+        typeView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(openTypeVehiclesOptions)))
+    }
+    
+    func showVehicleTypes(_ listVehicleTypes: [TypeVehicle]) {
+        self.vehicleTypes = listVehicleTypes
+    }
+    
+    @objc func openTypeVehiclesOptions(_ sender: UITapGestureRecognizer) {
+        var typeVehiclesDescription = [String]()
+        var typeVehicleCode = [String]()
+        for item in self.vehicleTypes! {
+            typeVehicleCode.append(item.code!)
+            typeVehiclesDescription.append(item.type!)
+        }
+        
+        dropDown.dataSource = typeVehiclesDescription
+        dropDown.anchorView = typeView
+        dropDown.selectionBackgroundColor = .blue
+        dropDown.show()
+        dropDown.selectionAction = { [weak self] (index, item) in
+            self?.typeLabel.text = item
+            self?.typeLabel.textColor = .black
+            self?.codeType = typeVehicleCode[index]
+            self?.validateTypeVehicleToSelectCylinder(item)
+        }
+    }
+    
+    func validateTypeVehicleToSelectCylinder(_ item: String?) {
+        if item == "Carro" {
+            self.cylinderView.isHidden = true
+            self.cylinderTextField.text = "0"
+        } else {
+            self.cylinderView.isHidden = false
+            self.cylinderTextField.text = ""
+            self.cylinderTextField.placeholder = "Cilindraje"
+        }
     }
     
     func errorService(_ error: String) {
@@ -62,24 +111,34 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
         cleanFields()
     }
     
-    func showVehicleTypes(_ listVehicleTypes: [TypeVehicle]) {
-        self.vehicleTypes = listVehicleTypes
+    @IBAction func registerVehicle(_ sender: Any) {
+        if fieldsAreNotEmpty() {
+            self.vehicle.typeVehicleCode = Int(self.codeType!)
+            self.vehicle.plate = plateTextField.text!.replacingOccurrences(of: " ", with: "").uppercased()
+            self.vehicle.owner = ownerTextField.text!
+            self.vehicle.cylinder = Int(cylinderTextField.text!)
+            self.vehicle.typeVehicleDescription = self.typeLabel.text!
+            addVehiclePresenter.callServiceAddVehicle(vehicle)
+        }
     }
     
-    @IBAction func registerVehicle(_ sender: Any) {
-        self.vehicle.typeVehicleCode = 1
-        self.vehicle.plate = plateTextField.text!
-        self.vehicle.owner = ownerTextField.text!
-        self.vehicle.cylinder = Int(cylinderTextField.text!)
-        self.vehicle.typeVehicleDescription = "Carro"
-        
-        addVehiclePresenter.callServiceAddVehicle(vehicle)
+    func fieldsAreNotEmpty() -> Bool {
+        if self.typeLabel.text == "" || self.plateTextField.text == "" || self.ownerTextField.text == "" || self.cylinderTextField.text == "" {
+            AlertForEmptyField()
+            return false
+        } else {
+            return true
+        }
     }
     
     func cleanFields() {
         self.plateTextField.text = ""
         self.ownerTextField.text = ""
-        self.cylinderTextField.text = ""
+        self.typeLabel.text = ""
+        if self.cylinderTextField.text == "0"{
+            self.cylinderTextField.text = ""
+        }
+        self.cylinderView.isHidden = true
     }
 
 }

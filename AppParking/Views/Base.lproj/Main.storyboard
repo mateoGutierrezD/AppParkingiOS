@@ -44,15 +44,30 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRs-Ih-KA1" userLabel="Type View">
                                         <rect key="frame" x="0.0" y="60" width="343" height="89.5"/>
                                         <subviews>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qff-l4-Ijp">
-                                                <rect key="frame" x="34.5" y="22" width="274" height="45"/>
-                                            </pickerView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-jj-VCH">
+                                                <rect key="frame" x="34.5" y="13.5" width="274" height="62.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-ko-Nrt">
+                                                        <rect key="frame" x="5" y="15.5" width="247" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="dbg-ko-Nrt" firstAttribute="height" secondItem="Ina-jj-VCH" secondAttribute="height" multiplier="0.5" id="RbO-7I-1qr"/>
+                                                    <constraint firstItem="dbg-ko-Nrt" firstAttribute="leading" secondItem="Ina-jj-VCH" secondAttribute="leading" constant="5" id="eGm-cv-rZK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dbg-ko-Nrt" secondAttribute="trailing" constant="22" id="nKR-r0-gQi"/>
+                                                    <constraint firstItem="dbg-ko-Nrt" firstAttribute="centerY" secondItem="Ina-jj-VCH" secondAttribute="centerY" id="w6B-j0-49L"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Qff-l4-Ijp" firstAttribute="width" secondItem="DRs-Ih-KA1" secondAttribute="width" multiplier="0.8" id="GAx-jY-Wer"/>
-                                            <constraint firstItem="Qff-l4-Ijp" firstAttribute="centerY" secondItem="DRs-Ih-KA1" secondAttribute="centerY" id="PZZ-gi-HeC"/>
-                                            <constraint firstItem="Qff-l4-Ijp" firstAttribute="height" secondItem="DRs-Ih-KA1" secondAttribute="height" multiplier="0.5" id="ZIg-mj-OMX"/>
-                                            <constraint firstItem="Qff-l4-Ijp" firstAttribute="centerX" secondItem="DRs-Ih-KA1" secondAttribute="centerX" id="kZr-ok-P6a"/>
+                                            <constraint firstItem="Ina-jj-VCH" firstAttribute="centerX" secondItem="DRs-Ih-KA1" secondAttribute="centerX" id="4Na-dc-pUU"/>
+                                            <constraint firstItem="Ina-jj-VCH" firstAttribute="height" secondItem="DRs-Ih-KA1" secondAttribute="height" multiplier="0.7" id="Ogg-TC-JD9"/>
+                                            <constraint firstItem="Ina-jj-VCH" firstAttribute="centerY" secondItem="DRs-Ih-KA1" secondAttribute="centerY" id="Vdt-Om-z3R"/>
+                                            <constraint firstItem="Ina-jj-VCH" firstAttribute="width" secondItem="DRs-Ih-KA1" secondAttribute="width" multiplier="0.8" id="rum-ep-SWC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acq-l3-Q0S" userLabel="Plate view">
@@ -60,7 +75,6 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpW-Cz-YFv">
                                                 <rect key="frame" x="34.5" y="13.5" width="274" height="62.5"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -165,16 +179,18 @@
                     <tabBarItem key="tabBarItem" title="Registrar" id="acW-dT-cKf" userLabel="Listar"/>
                     <connections>
                         <outlet property="cylinderTextField" destination="CUR-Hu-sHi" id="xmY-iG-Tre"/>
+                        <outlet property="cylinderView" destination="pjc-Ny-ARF" id="PZ0-Pc-5A5"/>
                         <outlet property="ownerTextField" destination="xB1-7t-O4o" id="xnI-pR-EJe"/>
-                        <outlet property="pickerVehicleTypes" destination="Qff-l4-Ijp" id="A7C-dm-1qQ"/>
                         <outlet property="plateTextField" destination="fpW-Cz-YFv" id="cMZ-8g-Yrv"/>
                         <outlet property="registerButton" destination="Fyg-zb-GaM" id="MF7-Pp-lwi"/>
                         <outlet property="titleLabel" destination="sWW-Cw-FxJ" id="Obl-sf-Mfs"/>
+                        <outlet property="typeLabel" destination="dbg-ko-Nrt" id="IaX-D8-yve"/>
+                        <outlet property="typeView" destination="Ina-jj-VCH" id="7Yc-jb-JkY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="147"/>
+            <point key="canvasLocation" x="-7.2000000000000002" y="146.17691154422789"/>
         </scene>
         <!--Eliminar-->
         <scene sceneID="P0o-cf-N3c">
@@ -346,14 +362,20 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="22"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Mateo Gutiérrez Díaz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJb-Ap-vZK">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="249" height="22"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="22"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITR 564" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcO-1M-KTH">
-                                                                            <rect key="frame" x="249" y="0.0" width="94" height="22"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carro" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-yL-3a1">
+                                                                            <rect key="frame" x="204" y="0.0" width="57" height="22"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITR 564" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcO-1M-KTH">
+                                                                            <rect key="frame" x="261" y="0.0" width="82" height="22"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -380,7 +402,7 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2019 06:00:33 a. m." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ3-Ro-vRE">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2019 06:00:33 a. m." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ3-Ro-vRE">
                                                                             <rect key="frame" x="117.5" y="0.0" width="225.5" height="21.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -414,6 +436,7 @@
                                                     <outlet property="hourInTitleLabel" destination="e6n-jU-84W" id="nYF-60-AOH"/>
                                                     <outlet property="ownerLabel" destination="DJb-Ap-vZK" id="DqA-Sj-fde"/>
                                                     <outlet property="plateLabel" destination="rcO-1M-KTH" id="3Bk-KK-prI"/>
+                                                    <outlet property="typeVehicleLabel" destination="dNN-yL-3a1" id="Usi-G1-tQp"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

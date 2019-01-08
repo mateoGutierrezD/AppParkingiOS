@@ -31,6 +31,6 @@ class Vehicle: NSObject, Mappable {
         owner <- map["owner"]
         cylinder <- map["cylinder"]
         dateIn <- map["dateIn"]
-        typeVehicleDescription <- map["type"]
+        typeVehicleDescription <- map["typeVehicleDescription"]
     }
 }

@@ -14,7 +14,7 @@ import AlamofireObjectMapper
 class TypeVehicleRepository {
     
     func callServiceGetTypeVehicles(_ iAddVehicle: IAddVehicle) {
-        Alamofire.request(Constants.URL_BASE + Constants.VEHICLE_PATH + Constants.GET_VEHICLES_PATH, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response: DataResponse<ResponseTypeVehicles>) in
+        Alamofire.request(Constants.URL_BASE + Constants.TYPE_VEHICLES_PATH + Constants.LIST_TYPE_VEHICLES_PATH, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response: DataResponse<ResponseTypeVehicles>) in
             
             switch response.result {
             case .success:

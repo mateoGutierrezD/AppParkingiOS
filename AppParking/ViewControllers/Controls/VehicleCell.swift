@@ -16,6 +16,7 @@ class VehicleCell: UITableViewCell {
     @IBOutlet weak var plateLabel: UILabel!
     @IBOutlet weak var hourInTitleLabel: UILabel!
     @IBOutlet weak var dateInLabel: UILabel!
+    @IBOutlet weak var typeVehicleLabel: UILabel!
     
     // MARK: Variables
     var vehicle: Vehicle? {
@@ -29,14 +30,8 @@ class VehicleCell: UITableViewCell {
             self.ownerLabel.text = vehicle!.owner!
             self.plateLabel.text = vehicle!.plate!
             self.dateInLabel.text = vehicle!.dateIn!
+            self.typeVehicleLabel.text = vehicle!.typeVehicleDescription!
             self.hourInTitleLabel.text = Constants.LABEL_HOUR_IN_TITLE
         }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
