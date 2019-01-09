@@ -69,7 +69,7 @@ class ListVehiclesViewController: BaseViewController, UITableViewDelegate, UITab
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VehicleCell") as! VehicleCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CELL_VEHICLE_IDENTIFIER) as! VehicleCell
         
         cell.vehicle = self.vehiclesList?[indexPath.row]
         return cell

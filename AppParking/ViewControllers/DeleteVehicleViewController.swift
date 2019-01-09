@@ -32,7 +32,7 @@ class DeleteVehicleViewController: BaseViewController, UITextFieldDelegate, IDel
     func setUpView() {
         self.titleLabel.text = Constants.DELETE_VEHICLE_VIEW_TITLE
         self.descriptionLabel.text = Constants.DELETE_VEHICLE_VIEW_DESCRIPTION
-        self.plateTextField.placeholder = Constants.EXAMPLE_PLATE
+        self.plateTextField.placeholder = Constants.PLATE_PLACEHOLDER
         self.plateTextField.delegate = self
         self.deleteButton.titleLabel?.text = Constants.BUTTON_DELETE_VIEW_TITLE
     }
@@ -83,7 +83,7 @@ class DeleteVehicleViewController: BaseViewController, UITextFieldDelegate, IDel
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
         let count = text.count + string.count - range.length
-        return count <= 7
+        return count <= Constants.PLATE_CHARACTERS_RANGE
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

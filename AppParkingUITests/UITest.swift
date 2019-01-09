@@ -24,6 +24,7 @@ class UITest: XCTestCase {
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        XCUIApplication().terminate()
     }
 
     func testRegisterVehicleSucessfully() {
@@ -69,6 +70,69 @@ class UITest: XCTestCase {
         
         let alert = app.alerts["Alerta!"]
         XCTAssertTrue(alert.staticTexts["Este vehículo ya está en el parqueadero"].exists)
+        app.buttons["Aceptar"].tap()
+    }
+    
+    func testRegisterVehicleFailedBecauseOnlyCanParkOnMondaysAndSundays() {
+        let app = XCUIApplication()
+        app.tabBars.buttons["Registrar"].tap()
+        
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .other).element.tap()
+        app.tables.staticTexts["Carro"].tap()
+        
+        let plateTextfield = app.textFields["Placa (Ejm+ ITZ 678)"]
+        plateTextfield.tap()
+        plateTextfield.typeText(PLATE_ONLY_MONDAYS_AND_SUNDAYS)
+        
+        let ownerTextfield = app.textFields["Dueño"]
+        ownerTextfield.tap()
+        ownerTextfield.typeText(OWNER_TO_REGISTER)
+        
+        app.buttons["Continuar"].tap()
+        app.buttons["Registrar vehículo"].tap()
+        
+        let alert = app.alerts["Alerta!"]
+        XCTAssertTrue(alert.staticTexts["Este vehículo no está autorizado para ingresar; sólo puede hacerlo los días domingo y lunes"].exists)
+        app.buttons["Aceptar"].tap()
+    }
+    
+    func testShouldListVehicleInParking() {
+        let app = XCUIApplication()
+        app.tabBars.buttons["Vehículos"].tap()
+        
+        XCTAssertTrue(app.staticTexts["Vehiculos en el parqueadero"].exists)
+        XCTAssertTrue(app.tables.cells.count >= 1)
+    }
+    
+    func testDeleteVehicleFailedBecauseItIsNotInParking() {
+        let app = XCUIApplication()
+        app.tabBars.buttons["Eliminar"].tap()
+        
+        let plateTextfield = app.textFields["Placa (Ejm+ ITZ 678)"]
+        plateTextfield.tap()
+        plateTextfield.typeText(PLATE_NON_EXIST)
+        
+        app.buttons["Continuar"].tap()
+        app.buttons["Eliminar vehículo"].tap()
+        
+        let alert = app.alerts["Alerta!"]
+        XCTAssertTrue(alert.staticTexts["Este vehículo no está en el parqueadero"].exists)
+        app.buttons["Aceptar"].tap()
+    }
+    
+    func testDeleteVehicleSucessfully() {
+        let app = XCUIApplication()
+        app.tabBars.buttons["Eliminar"].tap()
+        
+        let plateTextfield = app.textFields["Placa (Ejm+ ITZ 678)"]
+        plateTextfield.tap()
+        plateTextfield.typeText(PLATE_TO_TEST)
+        
+        app.buttons["Continuar"].tap()
+        app.buttons["Eliminar vehículo"].tap()
+        
+        let alert = app.alerts["Alerta!"]
+        XCTAssertTrue(alert.staticTexts.element.exists)
         app.buttons["Aceptar"].tap()
     }
 

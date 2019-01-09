@@ -44,10 +44,10 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
         self.plateTextField.delegate = self
         self.ownerTextField.delegate = self
         self.cylinderTextField.delegate = self
-        self.plateTextField.placeholder = "Placa (Ejm+ \(Constants.EXAMPLE_PLATE))"
-        self.ownerTextField.placeholder = "Dueño"
-        self.cylinderTextField.placeholder = "Cilidraje de la moto"
-        self.cylinderTextField.text = "0"
+        self.plateTextField.placeholder = Constants.PLATE_PLACEHOLDER
+        self.ownerTextField.placeholder = Constants.OWNER_PLACEHOLDER
+        self.cylinderTextField.placeholder = Constants.CYLINDER_PLACEHOLDER
+        self.cylinderTextField.text = Constants.DEFAULT_CYLINDER_VALUE
         viewDecoration(1, typeView, "#C3C8D1")
         initializeGestures()
     }
@@ -88,11 +88,11 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
     func validateTypeVehicleToSelectCylinder(_ item: String?) {
         if item == "Carro" {
             self.cylinderView.isHidden = true
-            self.cylinderTextField.text = "0"
+            self.cylinderTextField.text = Constants.DEFAULT_CYLINDER_VALUE
         } else {
             self.cylinderView.isHidden = false
             self.cylinderTextField.text = ""
-            self.cylinderTextField.placeholder = "Cilindraje"
+            self.cylinderTextField.placeholder = Constants.CYLINDER_PLACEHOLDER
         }
     }
     
@@ -135,7 +135,7 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
         self.plateTextField.text = ""
         self.ownerTextField.text = ""
         self.typeLabel.text = ""
-        if self.cylinderTextField.text == "0"{
+        if self.cylinderTextField.text == Constants.DEFAULT_CYLINDER_VALUE{
             self.cylinderTextField.text = ""
         }
         self.cylinderView.isHidden = true
@@ -144,7 +144,7 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = plateTextField.text else { return true }
         let count = text.count + string.count - range.length
-        return count <= 7
+        return count <= Constants.PLATE_CHARACTERS_RANGE
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

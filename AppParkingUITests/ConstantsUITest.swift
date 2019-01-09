@@ -12,5 +12,6 @@ import UIKit
 
 let PLATE_TO_TEST = "BBC123"
 let OWNER_TO_REGISTER = "Mateo Gutiérrez"
-
+let PLATE_ONLY_MONDAYS_AND_SUNDAYS = "AAA123"
+let PLATE_NON_EXIST = "ZZZZ12"
 

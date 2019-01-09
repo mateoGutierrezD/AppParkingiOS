@@ -129,7 +129,6 @@
 			children = (
 				68BE82F221DE8D6300544D3A /* AppParking */,
 				68BE831221DE8D6400544D3A /* AppParkingUITests */,
-				68BE82F121DE8D6300544D3A /* Products */,
 				FAC36DB10D969A10419D49D4 /* Pods */,
 				6DE69746E911B33CFAD5E96C /* Frameworks */,
 			);
@@ -143,6 +142,7 @@
 				68BE830F21DE8D6400544D3A /* AppParkingUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		68BE82F221DE8D6300544D3A /* AppParking */ = {
@@ -167,6 +167,7 @@
 			children = (
 				683FB35621E588490041E6F8 /* UITest.swift */,
 				683FB35D21E5929D0041E6F8 /* ConstantsUITest.swift */,
+				68BE82F121DE8D6300544D3A /* Products */,
 				68BE831521DE8D6400544D3A /* Info.plist */,
 			);
 			path = AppParkingUITests;
