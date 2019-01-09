@@ -140,5 +140,15 @@ class AddVehicleViewController: BaseViewController, IAddVehicle, UITextFieldDele
         }
         self.cylinderView.isHidden = true
     }
-
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = plateTextField.text else { return true }
+        let count = text.count + string.count - range.length
+        return count <= 7
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

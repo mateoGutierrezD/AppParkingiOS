@@ -47,10 +47,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-jj-VCH">
                                                 <rect key="frame" x="34.5" y="13.5" width="274" height="62.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-ko-Nrt">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de vehículo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-ko-Nrt">
                                                         <rect key="frame" x="5" y="15.5" width="247" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -76,7 +76,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpW-Cz-YFv">
                                                 <rect key="frame" x="34.5" y="13.5" width="274" height="62.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -93,7 +93,7 @@
                                                 <rect key="frame" x="34.5" y="13.5" width="274" height="63"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -110,7 +110,7 @@
                                                 <rect key="frame" x="34.5" y="13.5" width="274" height="62.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -176,7 +176,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4Iy-GS-AdN" secondAttribute="trailing" id="tGM-rd-3kV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Registrar" id="acW-dT-cKf" userLabel="Listar"/>
+                    <tabBarItem key="tabBarItem" title="Registrar" image="add-vehicle-icon" id="acW-dT-cKf" userLabel="Listar"/>
                     <connections>
                         <outlet property="cylinderTextField" destination="CUR-Hu-sHi" id="xmY-iG-Tre"/>
                         <outlet property="cylinderView" destination="pjc-Ny-ARF" id="PZ0-Pc-5A5"/>
@@ -241,7 +241,7 @@
                                                 <rect key="frame" x="50" y="91" width="243" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,7 +299,7 @@
                             <constraint firstItem="LgK-Xn-qpG" firstAttribute="top" secondItem="6Up-18-BSe" secondAttribute="bottom" id="hxb-nM-XQT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Eliminar" id="CeW-S8-rbz" userLabel="Eliminar"/>
+                    <tabBarItem key="tabBarItem" title="Eliminar" image="delete-vehicle-icon" id="CeW-S8-rbz" userLabel="Eliminar"/>
                     <connections>
                         <outlet property="deleteButton" destination="uaD-a7-L1z" id="oaC-B5-ViP"/>
                         <outlet property="descriptionLabel" destination="Cnt-w3-VCo" id="rqL-AV-FYR"/>
@@ -467,7 +467,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="5UA-Ml-1Km" secondAttribute="trailing" id="k6v-ZH-QjU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Vehículos" id="cPa-gy-q4n" userLabel="Registrar"/>
+                    <tabBarItem key="tabBarItem" title="Vehículos" image="show-vehicles-icon" id="cPa-gy-q4n" userLabel="Registrar"/>
                     <connections>
                         <outlet property="tableView" destination="E7Z-bS-tIh" id="sKx-aU-qpO"/>
                         <outlet property="titleViewLabel" destination="2Pw-Iw-nbo" id="Grp-vd-NEt"/>
@@ -482,7 +482,7 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" shadowImage="add-vehicle-icon" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -498,4 +498,9 @@
             <point key="canvasLocation" x="-649" y="-614"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add-vehicle-icon" width="37.5" height="37.5"/>
+        <image name="delete-vehicle-icon" width="37.5" height="37.5"/>
+        <image name="show-vehicles-icon" width="37.5" height="37.5"/>
+    </resources>
 </document>

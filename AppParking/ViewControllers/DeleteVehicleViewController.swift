@@ -85,4 +85,9 @@ class DeleteVehicleViewController: BaseViewController, UITextFieldDelegate, IDel
         let count = text.count + string.count - range.length
         return count <= 7
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

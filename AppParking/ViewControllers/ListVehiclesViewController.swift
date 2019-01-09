@@ -61,6 +61,7 @@ class ListVehiclesViewController: BaseViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (vehiclesList != nil) {
+            self.tabBarItem.badgeValue = String(vehiclesList!.count)
             return vehiclesList!.count
         } else {
             return 0
