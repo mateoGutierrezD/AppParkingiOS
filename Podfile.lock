@@ -5,11 +5,13 @@ PODS:
     - ObjectMapper (~> 3.4)
   - DropDown (2.3.4)
   - ObjectMapper (3.4.2)
+  - Swinject (2.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireObjectMapper (~> 5.0)
   - DropDown (= 2.3.4)
+  - Swinject
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -17,13 +19,15 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - DropDown
     - ObjectMapper
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   DropDown: f225ff0fd09dde064d17aa03db7e4d4e4ff40b6b
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: ec24d24a7061ca138bf2fd4375a6cec51372aa48
+PODFILE CHECKSUM: c74cd0e69bb3aae09f0900a3650926692cfe8e18
 
 COCOAPODS: 1.5.3

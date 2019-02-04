@@ -11,9 +11,9 @@ import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
 
-class VehicleRepository {
+class VehicleAPI: IRepositoryVehicle {
     
-    func callServiceGetVehicles(_ iListVehicles: IListVehicles) {
+    func getVehicles(_ iListVehicles: IListVehicles) {
         Alamofire.request(Constants.URL_BASE + Constants.VEHICLE_PATH + Constants.GET_VEHICLES_PATH, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response: DataResponse<ResponseVehicles>) in
             
             switch response.result {
@@ -29,7 +29,7 @@ class VehicleRepository {
         })
     }
     
-    func callServiceAddVehicle(_ iAddVehicle: IAddVehicle, _ vehicle: Vehicle) {
+    func addVehicle(_ iAddVehicle: IAddVehicle, _ vehicle: Vehicle){
         let arrayparametros: [String: Any] = [
             "typeVehicleCode" : vehicle.typeVehicleCode!,
             "plate" : vehicle.plate!,
@@ -39,7 +39,7 @@ class VehicleRepository {
         ]
         
         Alamofire.request(Constants.URL_BASE + Constants.VEHICLE_PATH + Constants.REGISTER_VEHICLE_PATH, method: .post, parameters: arrayparametros, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response:
-                DataResponse<ResponseObject>) in
+            DataResponse<ResponseObject>) in
             
             switch response.result {
             case .success:
@@ -50,7 +50,7 @@ class VehicleRepository {
         })
     }
     
-    func callServiceDeleteVehicle(_ iDeleteVehicle: IDeleteVehicle, _ plate: String) {
+    func deleteVehicle(_ iDeleteVehicle: IDeleteVehicle, _ plate: String) {
         Alamofire.request(Constants.URL_BASE + Constants.VEHICLE_PATH + Constants.DELETE_VEHICLE_PATH + plate, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response:
             DataResponse<ResponseObject>) in
             switch response.result {

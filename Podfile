@@ -9,6 +9,7 @@ target 'AppParking' do
   pod 'Alamofire', '~> 4.7'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'DropDown', '2.3.4'
+  pod 'Swinject'
 
   target 'AppParkingTests' do
     inherit! :search_paths

@@ -11,21 +11,21 @@ import Foundation
 class AddVehiclePresenter {
     
     fileprivate var iAddVehicle: IAddVehicle
-    fileprivate var vehicleRepository: VehicleRepository
-    fileprivate var typeVehicleRepository: TypeVehicleRepository
+    fileprivate var vehicleAPI: VehicleAPI
+    fileprivate var typeVehicleAPI: TypeVehicleAPI
     
     init(_ iAddVehicle: IAddVehicle) {
         self.iAddVehicle = iAddVehicle
-        self.vehicleRepository = VehicleRepository()
-        self.typeVehicleRepository = TypeVehicleRepository()
+        self.vehicleAPI = VehicleAPI()
+        self.typeVehicleAPI = TypeVehicleAPI()
     }
     
     func callServiceAddVehicle(_ vehicle: Vehicle) {
-        self.vehicleRepository.callServiceAddVehicle(iAddVehicle, vehicle)
+        self.vehicleAPI.addVehicle(iAddVehicle, vehicle)
     }
     
     func callServiceTGetTypeVehicles() {
-        self.typeVehicleRepository.callServiceGetTypeVehicles(iAddVehicle)
+        self.typeVehicleAPI.getTypeVehicles(iAddVehicle)
     }
 }
 

@@ -11,9 +11,9 @@ import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
 
-class TypeVehicleRepository {
+class TypeVehicleAPI: IRepositoryTypeVehicles {
     
-    func callServiceGetTypeVehicles(_ iAddVehicle: IAddVehicle) {
+    func getTypeVehicles(_ iAddVehicle: IAddVehicle) {
         Alamofire.request(Constants.URL_BASE + Constants.TYPE_VEHICLES_PATH + Constants.LIST_TYPE_VEHICLES_PATH, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response: DataResponse<ResponseTypeVehicles>) in
             
             switch response.result {

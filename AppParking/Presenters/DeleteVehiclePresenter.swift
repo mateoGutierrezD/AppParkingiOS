@@ -11,15 +11,15 @@ import Foundation
 class DeleteVehiclePresenter {
     
     fileprivate var iDeleteVehicle: IDeleteVehicle
-    fileprivate var vehicleRepository: VehicleRepository
+    fileprivate var vehicleAPI: VehicleAPI
     
     init(_ iDeleteVehicle: IDeleteVehicle) {
         self.iDeleteVehicle = iDeleteVehicle
-        self.vehicleRepository = VehicleRepository()
+        self.vehicleAPI = VehicleAPI()
     }
     
     func callServiceDeleteVehicle(_ string: String) {
         let plate = string.replacingOccurrences(of: " ", with: "").uppercased() 
-        self.vehicleRepository.callServiceDeleteVehicle(iDeleteVehicle, plate)
+        self.vehicleAPI.deleteVehicle(iDeleteVehicle, plate)
     }
 }

@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import Swinject
 
 class ListVehiclesPresenter {
     
     fileprivate var iListVehicles: IListVehicles
-    fileprivate var vehicleRepository: VehicleRepository
+    fileprivate var vehicleAPI: VehicleAPI
     
     init(_ iListVehicles: IListVehicles) {
         self.iListVehicles = iListVehicles
-        self.vehicleRepository = VehicleRepository()
+        self.vehicleAPI = VehicleAPI()
     }
     
     func callServiceGetVehicles() {
-        self.vehicleRepository.callServiceGetVehicles(iListVehicles)
+        vehicleAPI.getVehicles(iListVehicles)
     }
 }
