@@ -28,11 +28,11 @@ class BaseViewController: UIViewController {
     
     func viewDecoration(_ numberBorder: Int, _ view: UIView, _ hexColor: String!) {
         view.layer.borderWidth = CGFloat(numberBorder)
-        let color = hexStringToUIColor(hex: hexColor)
+        let color = hexStringToUIColor(hexColor)
         view.layer.borderColor = color.cgColor
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
+    func hexStringToUIColor(_ hex: String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
@@ -70,4 +70,6 @@ extension UIColor {
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
+    
+    
 }

@@ -19,7 +19,7 @@ class DeleteVehiclePresenter {
     }
     
     func callServiceDeleteVehicle(_ string: String) {
-        let plate = string.replacingOccurrences(of: " ", with: "").uppercased()
+        let plate = string.replacingOccurrences(of: " ", with: "").uppercased() 
         self.vehicleRepository.callServiceDeleteVehicle(iDeleteVehicle, plate)
     }
 }
