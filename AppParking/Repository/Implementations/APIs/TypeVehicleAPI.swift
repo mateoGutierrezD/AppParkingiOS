@@ -13,6 +13,7 @@ import AlamofireObjectMapper
 
 class TypeVehicleAPI: IRepositoryTypeVehicles {
     
+    
     func getTypeVehicles(_ iAddVehicle: IAddVehicle) {
         Alamofire.request(Constants.URL_BASE + Constants.TYPE_VEHICLES_PATH + Constants.LIST_TYPE_VEHICLES_PATH, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject(completionHandler: { (response: DataResponse<ResponseTypeVehicles>) in
             

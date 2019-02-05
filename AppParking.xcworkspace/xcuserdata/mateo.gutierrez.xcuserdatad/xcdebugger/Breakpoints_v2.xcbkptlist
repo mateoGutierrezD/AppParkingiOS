@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppParking/DependencyInjection/DependenciesManager.swift"
+            timestampString = "571095965.896556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "injectDependences()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppParking.DependenciesManager.injectDependences() -&gt; ()"
+                  moduleName = "AppParking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mateo.gutierrez/Documents/Development/AppParkingiOS/AppParking/DependencyInjection/DependenciesManager.swift"
+                  timestampString = "571095965.902313"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swinject.Resolver) -&gt; AppParking.IRepositoryTypeVehicles in AppParking.DependenciesManager.injectDependences() -&gt; ()"
+                  moduleName = "AppParking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mateo.gutierrez/Documents/Development/AppParkingiOS/AppParking/DependencyInjection/DependenciesManager.swift"
+                  timestampString = "571095965.904508"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -15,6 +15,7 @@
 		681D5E2B2208D96400EF3DB9 /* TypeVehicleDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D5E2A2208D96400EF3DB9 /* TypeVehicleDataBase.swift */; };
 		681D5E2F220A20DC00EF3DB9 /* VehicleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D5E2E220A20DC00EF3DB9 /* VehicleMock.swift */; };
 		681D5E31220A210A00EF3DB9 /* TypeVehicleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D5E30220A210A00EF3DB9 /* TypeVehicleMock.swift */; };
+		681D5E34220A263F00EF3DB9 /* DependenciesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D5E33220A263F00EF3DB9 /* DependenciesManager.swift */; };
 		683FB35721E588490041E6F8 /* UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683FB35621E588490041E6F8 /* UITest.swift */; };
 		683FB35E21E5929D0041E6F8 /* ConstantsUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683FB35D21E5929D0041E6F8 /* ConstantsUITest.swift */; };
 		68BE82F421DE8D6300544D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE82F321DE8D6300544D3A /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 		681D5E2A2208D96400EF3DB9 /* TypeVehicleDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVehicleDataBase.swift; sourceTree = "<group>"; };
 		681D5E2E220A20DC00EF3DB9 /* VehicleMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleMock.swift; sourceTree = "<group>"; };
 		681D5E30220A210A00EF3DB9 /* TypeVehicleMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeVehicleMock.swift; sourceTree = "<group>"; };
+		681D5E33220A263F00EF3DB9 /* DependenciesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesManager.swift; sourceTree = "<group>"; };
 		683FB35621E588490041E6F8 /* UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITest.swift; sourceTree = "<group>"; };
 		683FB35D21E5929D0041E6F8 /* ConstantsUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUITest.swift; sourceTree = "<group>"; };
 		68BE82F021DE8D6300544D3A /* AppParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +185,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		681D5E32220A25F800EF3DB9 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				681D5E33220A263F00EF3DB9 /* DependenciesManager.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 		68BE82E721DE8D6300544D3A = {
 			isa = PBXGroup;
 			children = (
@@ -211,10 +221,11 @@
 				68BE82FF21DE8D6400544D3A /* Info.plist */,
 				68FB46CA21DE8F5000B80EF0 /* Base */,
 				68FB46D221DE8FE900B80EF0 /* Models */,
+				68FB46CE21DE8F6F00B80EF0 /* Protocols */,
 				68FB46CC21DE8F6300B80EF0 /* ViewControllers */,
 				68FB46CD21DE8F6A00B80EF0 /* Presenters */,
 				681D5E212208CF5700EF3DB9 /* Repository */,
-				68FB46CE21DE8F6F00B80EF0 /* Protocols */,
+				681D5E32220A25F800EF3DB9 /* DependencyInjection */,
 				68FB46D121DE8F9300B80EF0 /* Views */,
 				68FB46D021DE8F8000B80EF0 /* Resources */,
 			);
@@ -580,6 +591,7 @@
 				68FB46EF21DEA3CD00B80EF0 /* TypeVehicle.swift in Sources */,
 				681D5E2B2208D96400EF3DB9 /* TypeVehicleDataBase.swift in Sources */,
 				68FB470521DF182B00B80EF0 /* ResponseTypeVehicles.swift in Sources */,
+				681D5E34220A263F00EF3DB9 /* DependenciesManager.swift in Sources */,
 				68FB46D621DE90AA00B80EF0 /* ListVehiclesViewController.swift in Sources */,
 				68FB46DF21DE967B00B80EF0 /* DeleteVehicleViewController.swift in Sources */,
 				681D5E31220A210A00EF3DB9 /* TypeVehicleMock.swift in Sources */,

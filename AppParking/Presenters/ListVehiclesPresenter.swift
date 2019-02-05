@@ -12,14 +12,14 @@ import Swinject
 class ListVehiclesPresenter {
     
     fileprivate var iListVehicles: IListVehicles
-    fileprivate var vehicleAPI: VehicleAPI
+    fileprivate var vehicleAPI: VehicleAPI?
     
     init(_ iListVehicles: IListVehicles) {
         self.iListVehicles = iListVehicles
-        self.vehicleAPI = VehicleAPI()
+        self.vehicleAPI = AppDelegate.dependenciesManager.container.resolve(VehicleAPI.self)
     }
     
     func callServiceGetVehicles() {
-        vehicleAPI.getVehicles(iListVehicles)
+        vehicleAPI!.getVehicles(iListVehicles)
     }
 }
