@@ -29,6 +29,7 @@ class ListVehiclesViewController: BaseViewController, UITableViewDelegate, UITab
     
     func initializeDelegates() {
         listVehiclesPresenter = ListVehiclesPresenter(self)
+        listVehiclesPresenter.resolveDependencies()
         listVehiclesPresenter.callServiceGetVehicles()
     }
     

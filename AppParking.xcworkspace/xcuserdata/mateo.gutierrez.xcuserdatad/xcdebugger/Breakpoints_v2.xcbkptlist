@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppParking/DependencyInjection/DependenciesManager.swift"
-            timestampString = "571095965.896556"
+            timestampString = "571177528.486601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -25,8 +25,8 @@
                   symbolName = "AppParking.DependenciesManager.injectDependences() -&gt; ()"
                   moduleName = "AppParking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mateo.gutierrez/Documents/Development/AppParkingiOS/AppParking/DependencyInjection/DependenciesManager.swift"
-                  timestampString = "571095965.902313"
+                  urlString = "file:///Users/mateo.gutierrez/Documents/Development/iOS/AppParkingiOS/AppParking/DependencyInjection/DependenciesManager.swift"
+                  timestampString = "571268524.722303"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -40,8 +40,8 @@
                   symbolName = "closure #1 (Swinject.Resolver) -&gt; AppParking.IRepositoryTypeVehicles in AppParking.DependenciesManager.injectDependences() -&gt; ()"
                   moduleName = "AppParking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mateo.gutierrez/Documents/Development/AppParkingiOS/AppParking/DependencyInjection/DependenciesManager.swift"
-                  timestampString = "571095965.904508"
+                  urlString = "file:///Users/mateo.gutierrez/Documents/Development/iOS/AppParkingiOS/AppParking/DependencyInjection/DependenciesManager.swift"
+                  timestampString = "571268524.724514"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -49,6 +49,22 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppParking/Presenters/ListVehiclesPresenter.swift"
+            timestampString = "571268524.594588"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "resolveDependencies()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -12,14 +12,20 @@ import Swinject
 class ListVehiclesPresenter {
     
     fileprivate var iListVehicles: IListVehicles
-    fileprivate var vehicleAPI: VehicleAPI?
+    var vehicleAPI: VehicleAPI?
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     init(_ iListVehicles: IListVehicles) {
         self.iListVehicles = iListVehicles
-        self.vehicleAPI = AppDelegate.dependenciesManager.container.resolve(VehicleAPI.self)
+    }
+    
+    func resolveDependencies() {
+        self.vehicleAPI = delegate.container.resolve(IRepositoryVehicle.self) as! VehicleAPI
     }
     
     func callServiceGetVehicles() {
-        vehicleAPI!.getVehicles(iListVehicles)
+        self.vehicleAPI!.getVehicles(iListVehicles)
     }
+    
+    
 }
